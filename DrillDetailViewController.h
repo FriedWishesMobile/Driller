@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DrillDetailViewController : UITableViewController {
+@interface DrillDetailViewController : UIViewController {
 
     NSString *string;
 
-    IBOutlet UILabel *theLabel;
+    UILabel *theLabel;
 }
 
 @property (nonatomic, retain) NSString *string;
-@property (nonatomic, retain) UILabel *theLabel;
+@property (nonatomic, retain) IBOutlet UILabel *theLabel;
 
 @end
