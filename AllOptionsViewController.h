@@ -10,7 +10,9 @@
 
 
 @interface AllOptionsViewController : UITableViewController {
-
+    NSMutableArray *allOptions;
 }
+
+@property (nonatomic, retain) NSMutableArray *allOptions;
 
 @end

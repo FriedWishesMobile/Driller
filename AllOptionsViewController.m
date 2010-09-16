@@ -11,18 +11,20 @@
 
 @implementation AllOptionsViewController
 
+@synthesize allOptions;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
 - (void)viewDidLoad {
+    allOptions = [[NSMutableArray alloc] initWithObjects:@"Apple", @"Microsoft", @"Dell", @"HP", @"Toshiba", nil];
+
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,13 +60,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return <#number of sections#>;
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return <#number of rows in section#>;
+    return [allOptions count];
 }
 
 
@@ -79,7 +81,8 @@
     }
     
     // Configure the cell...
-    
+    cell.textLabel.text = [allOptions objectAtIndex:indexPath.row];
+
     return cell;
 }
 
@@ -156,6 +159,7 @@
 
 
 - (void)dealloc {
+    [allOptions release];
     [super dealloc];
 }
 
