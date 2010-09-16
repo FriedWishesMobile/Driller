@@ -11,6 +11,7 @@
 @implementation DrillerAppDelegate
 
 @synthesize window;
+@synthesize theNavController;
 
 
 #pragma mark -
