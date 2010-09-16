@@ -10,9 +10,11 @@
 
 @interface DrillerAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+    UINavigationController *theNavController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UINavigationController *theNavController;
 
 @end
 
